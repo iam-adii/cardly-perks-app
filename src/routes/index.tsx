@@ -233,8 +233,8 @@ function Index() {
               onClick={() => setActive(c.id)}
               className={
                 active === c.id
-                  ? "shrink-0 rounded-full bg-primary px-4 py-2 text-[13px] font-bold text-primary-foreground transition-colors"
-                  : "shrink-0 rounded-full bg-card px-4 py-2 text-[13px] font-semibold text-muted-foreground ring-1 ring-border transition-colors"
+                  ? "shrink-0 rounded-full bg-primary px-4 py-2 text-[13px] font-bold text-primary-foreground transition-colors dark:shadow-[0_0_18px_-4px_color-mix(in_oklab,var(--gold)_45%,transparent)]"
+                  : "shrink-0 rounded-full bg-card px-4 py-2 text-[13px] font-semibold text-muted-foreground ring-1 ring-border transition-colors dark:text-gold/80 dark:ring-gold/25"
               }
             >
               {c.label}
@@ -264,20 +264,20 @@ function Index() {
             <article
               key={offer.vendor}
               style={{ animationDelay: `${i * 70}ms` }}
-              className="animate-offer-rise flex items-center gap-3.5 rounded-3xl bg-card p-4 shadow-sm ring-1 ring-border"
+              className="animate-offer-rise flex items-center gap-3.5 rounded-3xl bg-card p-4 shadow-sm ring-1 ring-border dark:ring-gold/20 dark:shadow-[0_0_22px_-6px_color-mix(in_oklab,var(--gold)_18%,transparent)]"
             >
-              <div className="grid size-12 shrink-0 place-items-center rounded-2xl bg-muted text-foreground">
+              <div className="grid size-12 shrink-0 place-items-center rounded-2xl bg-muted text-foreground dark:bg-gold/15 dark:text-gold dark:ring-1 dark:ring-gold/30">
                 <offer.icon className="size-5" strokeWidth={1.8} />
               </div>
               <div className="min-w-0 flex-1">
-                <p className="truncate text-sm font-bold tracking-tight">
+                <p className="truncate text-sm font-bold tracking-tight dark:text-gold/95">
                   {offer.vendor}
                 </p>
-                <p className="mt-0.5 truncate text-[11px] text-muted-foreground">
+                <p className="mt-0.5 truncate text-[11px] text-muted-foreground dark:text-gold/55">
                   {offer.meta}
                 </p>
               </div>
-              <span className="shrink-0 rounded-full bg-secondary px-3 py-1.5 text-xs font-extrabold tracking-tight text-secondary-foreground">
+              <span className="shrink-0 rounded-full bg-secondary px-3 py-1.5 text-xs font-extrabold tracking-tight text-secondary-foreground dark:bg-gold dark:text-gold-foreground dark:shadow-[0_0_14px_-3px_color-mix(in_oklab,var(--gold)_55%,transparent)]">
                 {offer.value}
               </span>
             </article>
