@@ -287,7 +287,7 @@ function Index() {
 
       {/* Floating bottom nav — same as reference */}
       <nav className="fixed bottom-0 left-1/2 w-full max-w-md -translate-x-1/2 px-5 pb-5">
-        <div className="grid grid-cols-4 rounded-full bg-card py-2.5 shadow-[0_18px_40px_-16px_rgba(0,0,0,0.25)] ring-1 ring-border">
+        <div className="grid grid-cols-4 rounded-full bg-card py-2.5 shadow-[0_18px_40px_-16px_rgba(0,0,0,0.25)] ring-1 ring-border dark:ring-gold/25 dark:shadow-[0_18px_40px_-14px_color-mix(in_oklab,var(--gold)_22%,transparent)]">
           {[
             { icon: Home, label: "Home", active: true },
             { icon: Tag, label: "Offers", active: false },
@@ -302,8 +302,8 @@ function Index() {
               <span
                 className={
                   active
-                    ? "grid size-11 place-items-center rounded-full bg-primary text-primary-foreground"
-                    : "grid size-11 place-items-center rounded-full text-muted-foreground transition-colors hover:text-foreground"
+                    ? "grid size-11 place-items-center rounded-full bg-primary text-primary-foreground dark:bg-gold dark:text-gold-foreground dark:shadow-[0_0_18px_-2px_color-mix(in_oklab,var(--gold)_55%,transparent)]"
+                    : "grid size-11 place-items-center rounded-full text-muted-foreground transition-colors hover:text-foreground dark:text-gold/60 dark:hover:text-gold"
                 }
               >
                 <Icon className="size-5" strokeWidth={1.9} />
