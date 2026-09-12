@@ -129,19 +129,19 @@ function Index() {
             <button
               aria-label="Toggle dark mode"
               onClick={toggleTheme}
-              className="grid size-11 place-items-center rounded-full bg-card text-foreground shadow-sm ring-1 ring-border transition-transform active:scale-95"
+              className="grid size-11 place-items-center rounded-full bg-card text-foreground shadow-sm ring-1 ring-border transition-transform active:scale-95 dark:shadow-[0_0_18px_-4px_color-mix(in_oklab,var(--gold)_35%,transparent)]"
             >
               {dark ? (
-                <Sun className="size-5" strokeWidth={1.8} />
+                <Sun className="size-5 text-gold" strokeWidth={1.8} />
               ) : (
                 <Moon className="size-5" strokeWidth={1.8} />
               )}
             </button>
             <button
               aria-label="Notifications"
-              className="grid size-11 place-items-center rounded-full bg-card text-foreground shadow-sm ring-1 ring-border transition-transform active:scale-95"
+              className="grid size-11 place-items-center rounded-full bg-card text-foreground shadow-sm ring-1 ring-border transition-transform active:scale-95 dark:shadow-[0_0_18px_-4px_color-mix(in_oklab,var(--gold)_35%,transparent)]"
             >
-              <Bell className="size-5" strokeWidth={1.8} />
+              <Bell className="size-5 dark:text-gold" strokeWidth={1.8} />
             </button>
           </div>
         </header>
