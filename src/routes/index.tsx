@@ -208,7 +208,7 @@ function Index() {
           ].map(({ icon: Icon, label }) => (
             <button
               key={label}
-              className="flex flex-col items-center gap-2.5 rounded-3xl bg-card py-4 shadow-sm ring-1 ring-black/5 transition-transform active:scale-95"
+              className="flex flex-col items-center gap-2.5 rounded-3xl bg-card py-4 shadow-sm ring-1 ring-border transition-transform active:scale-95"
             >
               <span className="grid size-10 place-items-center rounded-full bg-primary text-primary-foreground">
                 <Icon className="size-[18px]" strokeWidth={1.9} />
@@ -227,7 +227,7 @@ function Index() {
               className={
                 active === c.id
                   ? "shrink-0 rounded-full bg-primary px-4 py-2 text-[13px] font-bold text-primary-foreground transition-colors"
-                  : "shrink-0 rounded-full bg-card px-4 py-2 text-[13px] font-semibold text-muted-foreground ring-1 ring-black/5 transition-colors"
+                  : "shrink-0 rounded-full bg-card px-4 py-2 text-[13px] font-semibold text-muted-foreground ring-1 ring-border transition-colors"
               }
             >
               {c.label}
@@ -257,7 +257,7 @@ function Index() {
             <article
               key={offer.vendor}
               style={{ animationDelay: `${i * 70}ms` }}
-              className="animate-offer-rise flex items-center gap-3.5 rounded-3xl bg-card p-4 shadow-sm ring-1 ring-black/5"
+              className="animate-offer-rise flex items-center gap-3.5 rounded-3xl bg-card p-4 shadow-sm ring-1 ring-border"
             >
               <div className="grid size-12 shrink-0 place-items-center rounded-2xl bg-muted text-foreground">
                 <offer.icon className="size-5" strokeWidth={1.8} />
@@ -280,7 +280,7 @@ function Index() {
 
       {/* Floating bottom nav — same as reference */}
       <nav className="fixed bottom-0 left-1/2 w-full max-w-md -translate-x-1/2 px-5 pb-5">
-        <div className="grid grid-cols-4 rounded-full bg-card py-2.5 shadow-[0_18px_40px_-16px_rgba(0,0,0,0.25)] ring-1 ring-black/5">
+        <div className="grid grid-cols-4 rounded-full bg-card py-2.5 shadow-[0_18px_40px_-16px_rgba(0,0,0,0.25)] ring-1 ring-border">
           {[
             { icon: Home, label: "Home", active: true },
             { icon: Tag, label: "Offers", active: false },
