@@ -129,31 +129,38 @@ function Index() {
             <button
               aria-label="Toggle dark mode"
               onClick={toggleTheme}
-              className="grid size-11 place-items-center rounded-full bg-card text-foreground shadow-sm ring-1 ring-border transition-transform active:scale-95"
+              className="grid size-11 place-items-center rounded-full bg-card text-foreground shadow-sm ring-1 ring-border transition-transform active:scale-95 dark:shadow-[0_0_18px_-4px_color-mix(in_oklab,var(--gold)_35%,transparent)]"
             >
               {dark ? (
-                <Sun className="size-5" strokeWidth={1.8} />
+                <Sun className="size-5 text-gold" strokeWidth={1.8} />
               ) : (
                 <Moon className="size-5" strokeWidth={1.8} />
               )}
             </button>
             <button
               aria-label="Notifications"
-              className="grid size-11 place-items-center rounded-full bg-card text-foreground shadow-sm ring-1 ring-border transition-transform active:scale-95"
+              className="grid size-11 place-items-center rounded-full bg-card text-foreground shadow-sm ring-1 ring-border transition-transform active:scale-95 dark:shadow-[0_0_18px_-4px_color-mix(in_oklab,var(--gold)_35%,transparent)]"
             >
-              <Bell className="size-5" strokeWidth={1.8} />
+              <Bell className="size-5 dark:text-gold" strokeWidth={1.8} />
             </button>
           </div>
         </header>
 
         {/* Membership card */}
         <p className="mt-7 text-[15px] font-bold tracking-tight">My Card</p>
-        <section className="relative mt-3 overflow-hidden rounded-[28px] bg-primary p-6 text-primary-foreground shadow-[0_24px_50px_-20px_color-mix(in_oklab,var(--primary)_60%,transparent)]">
+        <section className="relative mt-3 overflow-hidden rounded-[28px] bg-primary p-6 text-primary-foreground shadow-[0_24px_50px_-20px_color-mix(in_oklab,var(--primary)_60%,transparent)] dark:ring-1 dark:ring-gold/40 dark:shadow-[0_24px_60px_-18px_color-mix(in_oklab,var(--gold)_45%,transparent),inset_0_1px_0_0_color-mix(in_oklab,var(--gold)_25%,transparent)]">
           <div
-            className="pointer-events-none absolute -top-16 -right-16 size-48 rounded-full opacity-20"
+            className="pointer-events-none absolute -top-16 -right-16 size-48 rounded-full opacity-20 dark:opacity-35"
             style={{
               background:
                 "radial-gradient(circle, var(--gold) 0%, transparent 70%)",
+            }}
+          />
+          <div
+            className="pointer-events-none absolute inset-0 opacity-0 dark:opacity-15"
+            style={{
+              background:
+                "linear-gradient(135deg, transparent 40%, color-mix(in oklab, var(--gold) 18%, transparent) 50%, transparent 60%)",
             }}
           />
           <div className="relative flex items-start justify-between">
@@ -161,17 +168,17 @@ function Index() {
               <p className="font-display text-lg font-bold tracking-tight">
                 Aurum
               </p>
-              <p className="mt-0.5 text-[10px] font-medium uppercase tracking-[0.22em] text-primary-foreground/50">
+              <p className="mt-0.5 text-[10px] font-medium uppercase tracking-[0.22em] text-primary-foreground/50 dark:text-gold/60">
                 Privilege Membership
               </p>
             </div>
-            <span className="rounded-full bg-gold px-3 py-1 text-[10px] font-extrabold uppercase tracking-[0.14em] text-gold-foreground">
+            <span className="rounded-full bg-gold px-3 py-1 text-[10px] font-extrabold uppercase tracking-[0.14em] text-gold-foreground shadow-[0_0_16px_-2px_color-mix(in_oklab,var(--gold)_60%,transparent)]">
               Gold
             </span>
           </div>
 
           <div className="relative mt-7">
-            <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-primary-foreground/50">
+            <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-primary-foreground/50 dark:text-gold/60">
               Member
             </p>
             <p className="mt-1 font-display text-[22px] font-semibold tracking-tight">
@@ -181,18 +188,18 @@ function Index() {
 
           <div className="relative mt-5 flex items-end justify-between">
             <div>
-              <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-primary-foreground/50">
+              <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-primary-foreground/50 dark:text-gold/60">
                 Card number
               </p>
-              <p className="mt-1 font-mono text-sm tracking-[0.16em] text-primary-foreground/90">
+              <p className="mt-1 font-mono text-sm tracking-[0.16em] text-primary-foreground/90 dark:text-gold/90">
                 •••• •••• •••• 6925
               </p>
             </div>
             <div className="text-right">
-              <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-primary-foreground/50">
+              <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-primary-foreground/50 dark:text-gold/60">
                 Expires
               </p>
-              <p className="mt-1 text-xs font-semibold text-primary-foreground/90">
+              <p className="mt-1 text-xs font-semibold text-primary-foreground/90 dark:text-gold/90">
                 09 / 28
               </p>
             </div>
@@ -208,12 +215,12 @@ function Index() {
           ].map(({ icon: Icon, label }) => (
             <button
               key={label}
-              className="flex flex-col items-center gap-2.5 rounded-3xl bg-card py-4 shadow-sm ring-1 ring-border transition-transform active:scale-95"
+              className="flex flex-col items-center gap-2.5 rounded-3xl bg-card py-4 shadow-sm ring-1 ring-border transition-transform active:scale-95 dark:ring-gold/25 dark:shadow-[0_0_20px_-6px_color-mix(in_oklab,var(--gold)_22%,transparent)]"
             >
-              <span className="grid size-10 place-items-center rounded-full bg-primary text-primary-foreground">
-                <Icon className="size-[18px]" strokeWidth={1.9} />
+              <span className="grid size-10 place-items-center rounded-full bg-primary text-primary-foreground dark:ring-1 dark:ring-gold/40 dark:shadow-[0_0_14px_-3px_color-mix(in_oklab,var(--gold)_45%,transparent)]">
+                <Icon className="size-[18px] dark:text-gold" strokeWidth={1.9} />
               </span>
-              <span className="text-xs font-semibold">{label}</span>
+              <span className="text-xs font-semibold dark:text-gold/90">{label}</span>
             </button>
           ))}
         </div>
@@ -226,8 +233,8 @@ function Index() {
               onClick={() => setActive(c.id)}
               className={
                 active === c.id
-                  ? "shrink-0 rounded-full bg-primary px-4 py-2 text-[13px] font-bold text-primary-foreground transition-colors"
-                  : "shrink-0 rounded-full bg-card px-4 py-2 text-[13px] font-semibold text-muted-foreground ring-1 ring-border transition-colors"
+                  ? "shrink-0 rounded-full bg-primary px-4 py-2 text-[13px] font-bold text-primary-foreground transition-colors dark:shadow-[0_0_18px_-4px_color-mix(in_oklab,var(--gold)_45%,transparent)]"
+                  : "shrink-0 rounded-full bg-card px-4 py-2 text-[13px] font-semibold text-muted-foreground ring-1 ring-border transition-colors dark:text-gold/80 dark:ring-gold/25"
               }
             >
               {c.label}
@@ -257,20 +264,20 @@ function Index() {
             <article
               key={offer.vendor}
               style={{ animationDelay: `${i * 70}ms` }}
-              className="animate-offer-rise flex items-center gap-3.5 rounded-3xl bg-card p-4 shadow-sm ring-1 ring-border"
+              className="animate-offer-rise flex items-center gap-3.5 rounded-3xl bg-card p-4 shadow-sm ring-1 ring-border dark:ring-gold/20 dark:shadow-[0_0_22px_-6px_color-mix(in_oklab,var(--gold)_18%,transparent)]"
             >
-              <div className="grid size-12 shrink-0 place-items-center rounded-2xl bg-muted text-foreground">
+              <div className="grid size-12 shrink-0 place-items-center rounded-2xl bg-muted text-foreground dark:bg-gold/15 dark:text-gold dark:ring-1 dark:ring-gold/30">
                 <offer.icon className="size-5" strokeWidth={1.8} />
               </div>
               <div className="min-w-0 flex-1">
-                <p className="truncate text-sm font-bold tracking-tight">
+                <p className="truncate text-sm font-bold tracking-tight dark:text-gold/95">
                   {offer.vendor}
                 </p>
-                <p className="mt-0.5 truncate text-[11px] text-muted-foreground">
+                <p className="mt-0.5 truncate text-[11px] text-muted-foreground dark:text-gold/55">
                   {offer.meta}
                 </p>
               </div>
-              <span className="shrink-0 rounded-full bg-secondary px-3 py-1.5 text-xs font-extrabold tracking-tight text-secondary-foreground">
+              <span className="shrink-0 rounded-full bg-secondary px-3 py-1.5 text-xs font-extrabold tracking-tight text-secondary-foreground dark:bg-gold dark:text-gold-foreground dark:shadow-[0_0_14px_-3px_color-mix(in_oklab,var(--gold)_55%,transparent)]">
                 {offer.value}
               </span>
             </article>
@@ -280,7 +287,7 @@ function Index() {
 
       {/* Floating bottom nav — same as reference */}
       <nav className="fixed bottom-0 left-1/2 w-full max-w-md -translate-x-1/2 px-5 pb-5">
-        <div className="grid grid-cols-4 rounded-full bg-card py-2.5 shadow-[0_18px_40px_-16px_rgba(0,0,0,0.25)] ring-1 ring-border">
+        <div className="grid grid-cols-4 rounded-full bg-card py-2.5 shadow-[0_18px_40px_-16px_rgba(0,0,0,0.25)] ring-1 ring-border dark:ring-gold/25 dark:shadow-[0_18px_40px_-14px_color-mix(in_oklab,var(--gold)_22%,transparent)]">
           {[
             { icon: Home, label: "Home", active: true },
             { icon: Tag, label: "Offers", active: false },
@@ -295,8 +302,8 @@ function Index() {
               <span
                 className={
                   active
-                    ? "grid size-11 place-items-center rounded-full bg-primary text-primary-foreground"
-                    : "grid size-11 place-items-center rounded-full text-muted-foreground transition-colors hover:text-foreground"
+                    ? "grid size-11 place-items-center rounded-full bg-primary text-primary-foreground dark:bg-gold dark:text-gold-foreground dark:shadow-[0_0_18px_-2px_color-mix(in_oklab,var(--gold)_55%,transparent)]"
+                    : "grid size-11 place-items-center rounded-full text-muted-foreground transition-colors hover:text-foreground dark:text-gold/60 dark:hover:text-gold"
                 }
               >
                 <Icon className="size-5" strokeWidth={1.9} />
