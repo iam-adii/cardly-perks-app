@@ -85,6 +85,27 @@ const offers = [
 
 function Index() {
   const [active, setActive] = useState("all");
+  const [dark, setDark] = useState(false);
+
+  useEffect(() => {
+    const stored = localStorage.getItem("theme");
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)",
+    ).matches;
+    const isDark = stored ? stored === "dark" : prefersDark;
+    setDark(isDark);
+    document.documentElement.classList.toggle("dark", isDark);
+  }, []);
+
+  const toggleTheme = () => {
+    setDark((prev) => {
+      const next = !prev;
+      document.documentElement.classList.toggle("dark", next);
+      localStorage.setItem("theme", next ? "dark" : "light");
+      return next;
+    });
+  };
+
   const visible =
     active === "all" ? offers : offers.filter((o) => o.categoryId === active);
 
@@ -104,12 +125,25 @@ function Index() {
               </p>
             </div>
           </div>
-          <button
-            aria-label="Notifications"
-            className="grid size-11 shrink-0 place-items-center rounded-full bg-card text-foreground shadow-sm ring-1 ring-black/5 transition-transform active:scale-95"
-          >
-            <Bell className="size-5" strokeWidth={1.8} />
-          </button>
+          <div className="flex shrink-0 items-center gap-2.5">
+            <button
+              aria-label="Toggle dark mode"
+              onClick={toggleTheme}
+              className="grid size-11 place-items-center rounded-full bg-card text-foreground shadow-sm ring-1 ring-border transition-transform active:scale-95"
+            >
+              {dark ? (
+                <Sun className="size-5" strokeWidth={1.8} />
+              ) : (
+                <Moon className="size-5" strokeWidth={1.8} />
+              )}
+            </button>
+            <button
+              aria-label="Notifications"
+              className="grid size-11 place-items-center rounded-full bg-card text-foreground shadow-sm ring-1 ring-border transition-transform active:scale-95"
+            >
+              <Bell className="size-5" strokeWidth={1.8} />
+            </button>
+          </div>
         </header>
 
         {/* Membership card */}
