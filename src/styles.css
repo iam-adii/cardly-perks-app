@@ -74,6 +74,37 @@
   --chart-5: oklch(0.769 0.188 70.08);
 }
 
+.dark {
+  /* Warm near-black canvas mirroring the light theme */
+  --background: oklch(0.185 0.012 70);
+  --foreground: oklch(0.95 0.01 85);
+  --card: oklch(0.245 0.014 70);
+  --card-foreground: oklch(0.95 0.01 85);
+  --popover: oklch(0.245 0.014 70);
+  --popover-foreground: oklch(0.95 0.01 85);
+  /* Membership card lifts slightly off the canvas in dark mode */
+  --primary: oklch(0.30 0.016 70);
+  --primary-foreground: oklch(0.96 0.01 85);
+  --secondary: oklch(0.32 0.015 70);
+  --secondary-foreground: oklch(0.93 0.01 85);
+  --muted: oklch(0.285 0.015 70);
+  --muted-foreground: oklch(0.68 0.02 80);
+  --accent: oklch(0.285 0.015 70);
+  --accent-foreground: oklch(0.93 0.01 85);
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: oklch(0.984 0.003 247.858);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 14%);
+  --ring: oklch(0.7 0.03 80);
+  --gold: oklch(0.82 0.1 82);
+  --gold-foreground: oklch(0.24 0.03 70);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+}
+
 @layer base {
   * {
     border-color: var(--color-border);
